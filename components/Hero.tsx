@@ -18,28 +18,29 @@ export default function Hero() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-l from-black/75 via-black/55 to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/20" />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen items-center">
+      <div className="relative z-10 flex min-h-screen items-center -mt-8">
         <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
-          {/* Right side */}
-          <div className="ml-auto max-w-2xl text-right text-white">
+          {/* Left side */}
+          <div className="max-w-2xl text-left text-white">
             {/* Tagline */}
-            <p className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium tracking-wide backdrop-blur-sm">
+            {/* <p className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium tracking-wide backdrop-blur-sm"> */}
+            <p className="mb-5 inline-block rounded-full border border-white/20 bg-white/10 px-8 py-3 text-sm font-medium tracking-wide backdrop-blur-sm">
               HD Glass UPVC & Aluminium
             </p>
 
             {/* Heading */}
-            <h1 className="text-4xl font-bold leading-tight md:text-6xl lg:text-7xl">
+            <h1 className="text-2xl font-bold leading-tight whitespace-nowrap md:text-4xl lg:text-5xl">
               Open Your Home To
-              <span className="mt-2 block text-blue-300">
+              <span className="mt-2 block text-orange-800">
                 More Light. More Space.
               </span>
             </h1>
 
             {/* Description */}
-            <p className="mt-6 ml-auto max-w-xl text-base leading-8 text-gray-200 md:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-8 text-gray-200 md:text-lg">
               Elevate your living experience with
               beautifully crafted aluminium
               windows that bring in natural
