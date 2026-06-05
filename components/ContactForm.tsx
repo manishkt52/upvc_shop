@@ -34,8 +34,7 @@ Requirement: ${message}
   };
 
   return (
-    <section
-      className="relative overflow-hidden py-20 text-white"
+    <section className="relative overflow-hidden py-10 text-white"
       style={{
           backgroundImage: "url('/contact_image.png')",
           backgroundSize: "cover",

@@ -44,15 +44,16 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
             Why Choose Us
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl">
+          {/* <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl"> */}
+          <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-6xl">
             Windows That Do More
           </h2>
 

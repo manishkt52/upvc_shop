@@ -74,7 +74,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="overflow-hidden bg-white py-20">
+    <section className="overflow-hidden bg-white py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">

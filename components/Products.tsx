@@ -1,77 +1,87 @@
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+"use client";
 
-const items = [
+import Image from "next/image";
+
+const products = [
   {
-    title: "Sliding Windows",
+    title: "Sliding Doors",
     image: "/img_1.jpg",
-    desc: "Smooth, space-saving designs with wide glass panels for more light and better views.",
   },
   {
-    title: "Casement Windows",
+    title: "Casement Doors",
     image: "/img_2.webp",
-    desc: "Classic side-opening windows designed for ventilation, comfort, and elegant styling.",
+  },
+  {
+    title: "French Doors",
+    image: "/img_3.jpg",
+  },
+  {
+    title: "Lift & Slide Doors",
+    image: "/img_2.webp",
   },
 ];
 
 export default function Products() {
+  const marqueeProducts = [...products, ...products];
+
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+    <section className="bg-white py-10">
+      {/* <div className="mx-auto max-w-7xl px-6"> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Our Collection
-          </p>
+        {/* <div className="mb-14 text-center"> */}
+        <div className="mx-auto mb-14 max-w-4xl text-center">
+          <span className="text-sm font-semibold uppercase tracking-[4px] text-orange-500">
+            Product Range
+          </span>
 
-          <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl">
-            Premium Window Range
+          {/* <h2 className="mt-4 text-4xl font-bold text-gray-900 md:text-6xl"> */}
+          <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-6xl">
+            Premium UPVC Doors
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            Discover beautifully engineered aluminium windows
-            crafted for modern homes and premium living.
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
+            Discover beautifully engineered UPVC doors crafted
+            for modern homes and luxury living.
           </p>
         </div>
 
-        {/* Products */}
-        <div className="mt-14 grid gap-10 md:grid-cols-2">
-          {items.map((item) => (
-            <div
-              key={item.title}
-              className="group overflow-hidden rounded-3xl bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
-            >
-              {/* Image */}
-              <div className="relative overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={700}
-                  height={500}
-                  className="h-[380px] w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+        {/* Marquee Carousel */}
+        <div className="overflow-hidden">
+          <div className="marquee">
+            {marqueeProducts.map((product, index) => (
+              <div
+                key={index}
+                // className="group w-[350px] flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:shadow-2xl"
+                className="group w-[350px] flex-shrink-0 overflow-hidden rounded-3xl bg-gray-50 border border-gray-200 transition duration-300"
+              >
+                <div className="relative h-[280px] w-full overflow-hidden bg-gray-200">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    sizes="350px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/10 transition group-hover:bg-black/25" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {product.title}
+                  </h3>
+
+                  <p className="mt-3 text-gray-600">
+                    Premium quality UPVC doors designed for
+                    security, durability and modern aesthetics.
+                  </p>
+
+                  <button className="mt-6 rounded-full bg-orange-500 px-6 py-3 font-medium text-white transition hover:bg-orange-600">
+                    Know More
+                  </button>
+                </div>
               </div>
-
-              {/* Content */}
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-
-                <p className="mt-4 leading-7 text-gray-600">
-                  {item.desc}
-                </p>
-
-                <button className="mt-6 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 font-medium text-white transition hover:bg-blue-700">
-                  Explore More
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
