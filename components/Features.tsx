@@ -40,18 +40,18 @@ const features = [
   {
     title: "Premium Design",
     icon: LayoutGrid,
-    image: "/features/design_new.jpg",
+    image: "/features/design.jpg",
   },
   {
     title: "Rust Free",
     icon: ShieldCheck,
-    image: "/features/rust_free_f.jpg",
+    image: "/features/rust.jpg",
   },
   {
     title: "Termite Proof",
     icon: Bug,
     image: "/features/termite.jpg",
-  },
+  }
 ];
 
 export default function Features() {
@@ -60,8 +60,8 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-2xl font-semibold uppercase tracking-widest text-blue-600">
-            Why Choose UPVC
+          <p className="text-2xl font-semibold tracking-widest text-blue-600">
+            WHY CHOOSE uPVC
           </p>
 
           {/* <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl"> */}

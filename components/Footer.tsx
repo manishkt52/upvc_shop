@@ -17,13 +17,17 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <h2 className="text-2xl font-bold">
-            Your Brand
+            HD Glass & uPVC
           </h2>
 
           <p className="mt-5 leading-8 text-gray-300">
-            Premium aluminium windows crafted for
+            {/* Premium aluminium windows crafted for
             modern homes with elegant design,
-            durability, and performance.
+            durability, and performance. */}
+            HD Glass and uPVC is transforming how India lives and works — one custom solution at a time. 
+            We combine cutting-edge uPVC technology with unmatched cost-efficiency and service you can count on.
+            Every product is built to global standards and designed around your exact requirements, 
+            because the best window or door isn't the most popular one <br /> — it's the right one for you.
           </p>
 
           {/* Social */}

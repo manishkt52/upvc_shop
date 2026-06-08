@@ -73,16 +73,16 @@ export default function Testimonials() {
     <section className="overflow-hidden bg-white py-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+          <p className="text-2xl font-semibold uppercase tracking-widest text-blue-600">
             Testimonials
           </p>
 
           <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl">
-            Loved By Homeowners
+            Loved By Customers
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            Hear from homeowners who upgraded their spaces with premium aluminium windows.
+          <p className="mt-5 text-2xl leading-8 text-gray-600">
+            Reviews from our customers who upgraded their spaces with our customized products. 
           </p>
         </div>
 

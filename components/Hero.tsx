@@ -1,18 +1,35 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const [mobileOpen, setMobileOpen] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerWidth < 640) {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-    {/* <h1 className="fixed top-0 left-0 z-[999999] bg-red-500 text-white p-2">
-        TEST HERO
-      </h1> */}
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative bg-white">
       <div className="relative z-10 flex min-h-screen items-center -mt-8">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12">
           <div className="flex flex-col items-center lg:flex-row lg:items-center">
+            {/* Left Content */}
             <div className="w-full text-center text-black lg:w-1/2 lg:text-left">
               <p className="mb-5 inline-block rounded-full border border-black/20 bg-white px-4 py-2 text-lg font-bold tracking-wide shadow-lg transition-all duration-300 sm:px-6 sm:py-3 sm:text-2xl lg:px-8 lg:text-4xl">
-                HD Glass & UPVC
+                HD Glass & uPVC
               </p>
 
               <h1 className="text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl">
@@ -37,22 +54,20 @@ export default function Hero() {
               </p>
             </div>
 
+            {/* Right Image */}
             <div className="mt-8 flex w-full justify-center lg:mt-0 lg:w-1/2 lg:justify-end lg:pl-16">
               <img
-                src="/hero_1.jpeg"
+                src="/hero.jpeg"
                 alt="UPVC Windows"
-                className="w-full max-w-[320px] h-auto object-contain sm:max-w-[450px] md:max-w-[650px] lg:max-w-[1000px]"
+                className="h-auto w-full max-w-[320px] object-contain sm:max-w-[450px] md:max-w-[650px] lg:max-w-[1000px]"
               />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Social Icons */}
-      <div
-        className="fixed right-6 top-[42%] z-[99999] flex -translate-y-1/2 flex-col gap-3 pointer-events-auto"
-        style={{ pointerEvents: "auto" }}
-      >
+      {/* ================= Desktop Social Icons ================= */}
+      <div className="fixed right-6 top-[45%] z-[99999] hidden -translate-y-1/2 flex-col gap-3 sm:flex">
         <a
           href="https://instagram.com"
           target="_blank"
@@ -92,23 +107,97 @@ export default function Hero() {
           />
         </a>
 
-        {/* ✅ Contact button — dispatches event caught by page.tsx */}
         <button
-            onClick={() => {
-              document.getElementById("footer")?.scrollIntoView({
-              behavior: "smooth",
-            });
-        }}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110 cursor-pointer"
+          onClick={() =>
+            document
+              .getElementById("footer")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110"
         >
-        <img
-        src="/social_media/contact_1.png"
-        alt="Call"
-        className="h-9 w-9 object-contain"
-      />
-      </button>
+          <img
+            src="/social_media/contact.png"
+            alt="Contact"
+            className="h-9 w-9 object-contain"
+          />
+        </button>
+      </div>
+
+      {/* ================= Mobile Social Icons ================= */}
+      <div className="fixed right-0 top-[45%] z-[99999] -translate-y-1/2 sm:hidden">
+        {mobileOpen ? (
+          <div className="flex flex-col gap-3 rounded-l-2xl bg-white p-2 shadow-xl">
+            {/* Hide Panel */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="text-center text-xl font-bold"
+            >
+              ▶
+            </button>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <img
+                src="/social_media/Instagram.png"
+                alt="Instagram"
+                className="h-9 w-9 object-contain"
+              />
+            </a>
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <img
+                src="/social_media/facebook.png"
+                alt="Facebook"
+                className="h-9 w-9 object-contain"
+              />
+            </a>
+
+            <a
+              href="https://wa.me/919211092872"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <img
+                src="/social_media/whatsapp.png"
+                alt="WhatsApp"
+                className="h-9 w-9 object-contain"
+              />
+            </a>
+
+            <button
+              onClick={() =>
+                document
+                  .getElementById("footer")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="flex h-12 w-12 items-center justify-center"
+            >
+              <img
+                src="/social_media/contact.png"
+                alt="Contact"
+                className="h-9 w-9 object-contain"
+              />
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="rounded-l-full bg-white px-2 py-6 text-xl font-bold shadow-xl"
+          >
+            ◀
+          </button>
+        )}
       </div>
     </section>
-    </>
   );
 }
