@@ -9,7 +9,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white">
+    <footer 
+    id="footer"
+    className="bg-gray-950 text-white">
       {/* Top */}
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-3 lg:px-12">
         {/* Brand */}
@@ -49,7 +51,7 @@ export default function Footer() {
           <div className="mt-6 space-y-5 text-gray-300">
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-blue-400" />
-              +91 98765 43210
+              +91 92110 92872
             </div>
 
             <div className="flex items-center gap-3">
@@ -59,10 +61,10 @@ export default function Footer() {
 
             <div className="flex items-start gap-3">
               <MapPin
-                size={18}
+                size={40}
                 className="mt-1 text-blue-400"
               />
-              Delhi NCR, India
+              Nanak Piou, Plot No. 5, Block H, Gopal Nagar Extension, Najafgarh, New Delhi 110043
             </div>
           </div>
         </div>
@@ -96,7 +98,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-white/10 py-6 text-center text-sm text-gray-400">
-        © 2026 Your Brand. All rights reserved.
+        © 2026 HD Glass & UPVC. All rights reserved.
       </div>
     </footer>
   );

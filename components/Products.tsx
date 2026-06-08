@@ -4,20 +4,40 @@ import Image from "next/image";
 
 const products = [
   {
-    title: "Sliding Doors",
-    image: "/img_1.jpg",
+    title: "Sliding",
+    image: "/products/slide_2.jpeg",
   },
   {
     title: "Casement Doors",
-    image: "/img_2.webp",
+    image: "/products/casement.jpg",
   },
   {
-    title: "French Doors",
-    image: "/img_3.jpg",
+    title: "Slide & Fold",
+    image: "/products/slide_fold.jpg",
   },
   {
-    title: "Lift & Slide Doors",
-    image: "/img_2.webp",
+    title: "Lift & Slide",
+    image: "/products/lift_slide_1.jpeg",
+  },
+  {
+    title: "Awning Windows",
+    image: "/products/awning.jpeg",
+  },
+  {
+    title: "Corner Slider",
+    image: "/products/corner_slide.jpg",
+  },
+  {
+    title: "Low threshold Slider",
+    image: "/products/low_threshold.jpg",
+  },
+  {
+    title: "French Windows",
+    image: "/products/french.jpeg",
+  },
+  {
+    title: "Villa Windows",
+    image: "/products/villa_windows.jpeg",
   },
 ];
 
@@ -30,19 +50,19 @@ export default function Products() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
         {/* <div className="mb-14 text-center"> */}
-        <div className="mx-auto mb-14 max-w-4xl text-center">
+        <div className="mx-auto mb-8 max-w-4xl text-center">
           <span className="text-sm font-semibold uppercase tracking-[4px] text-orange-500">
-            Product Range
+            {/* Product Range */}
           </span>
 
           {/* <h2 className="mt-4 text-4xl font-bold text-gray-900 md:text-6xl"> */}
           <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-6xl">
-            Premium UPVC Doors
+            Products Ranges
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-600">
-            Discover beautifully engineered UPVC doors crafted
-            for modern homes and luxury living.
+          <p className="mx-auto mt-6 max-w-3xl text-2xl text-gray-600">
+            Discover beautifully engineered UPVC doors & windows crafted
+            for modern homes and luxury living, <span className="text-orange-500">Specially customized for you.</span>
           </p>
         </div>
 
@@ -55,13 +75,13 @@ export default function Products() {
                 // className="group w-[350px] flex-shrink-0 overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:shadow-2xl"
                 className="group w-[350px] flex-shrink-0 overflow-hidden rounded-3xl bg-gray-50 border border-gray-200 transition duration-300"
               >
-                <div className="relative h-[280px] w-full overflow-hidden bg-gray-200">
+                <div className="relative h-[280px] w-full overflow-hidden bg-white p-4">
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
                     sizes="350px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 
@@ -74,10 +94,6 @@ export default function Products() {
                     Premium quality UPVC doors designed for
                     security, durability and modern aesthetics.
                   </p>
-
-                  <button className="mt-6 rounded-full bg-orange-500 px-6 py-3 font-medium text-white transition hover:bg-orange-600">
-                    Know More
-                  </button>
                 </div>
               </div>
             ))}

@@ -7,6 +7,8 @@ import {
   Zap,
   Wind,
   LayoutGrid,
+  Bug,
+  Lock
 } from "lucide-react";
 
 const features = [
@@ -32,13 +34,23 @@ const features = [
   },
   {
     title: "Enhanced Security",
-    icon: ShieldCheck,
+    icon: Lock,
     image: "/features/security.jpg",
   },
   {
-    title: "Minimal Design",
+    title: "Premium Design",
     icon: LayoutGrid,
-    image: "/features/design.jpg",
+    image: "/features/design_new.jpg",
+  },
+  {
+    title: "Rust Free",
+    icon: ShieldCheck,
+    image: "/features/rust_free_f.jpg",
+  },
+  {
+    title: "Termite Proof",
+    icon: Bug,
+    image: "/features/termite.jpg",
   },
 ];
 
@@ -48,24 +60,26 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-            Why Choose Us
+          <p className="text-2xl font-semibold uppercase tracking-widest text-blue-600">
+            Why Choose UPVC
           </p>
 
           {/* <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-5xl"> */}
           <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-6xl">
-            Windows That Do More
+            Features and Benefits
           </h2>
 
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            Beautifully crafted aluminium windows
+          {/* <p className="mt-5 text-2xl leading-8 text-gray-600"> */}
+          <p className="mt-4 mx-auto max-w-4xl text-lg leading-relaxed text-gray-600 md:text-2xl">
+            Beautifully crafted upvc windows
             designed for performance and modern
             living.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4"> */}
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {features.map((item) => {
             const Icon = item.icon;
 
@@ -75,7 +89,7 @@ export default function Features() {
                 className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 {/* Background image */}
-                <div className="relative h-72 w-full overflow-hidden">
+                <div className="relative h-60 w-auto overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}

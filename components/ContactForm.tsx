@@ -50,7 +50,7 @@ Requirement: ${message}
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left */}
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-blue-200">
+            <p className="text-xl font-semibold uppercase tracking-widest text-blue-200">
               Get In Touch
             </p>
 
@@ -61,10 +61,10 @@ Requirement: ${message}
               </span>
             </h2>
 
-            <p className="mt-6 max-w-lg text-lg leading-8 text-gray-200">
+            <p className="mt-6 max-w-lg text-xl leading-8 text-gray-200">
               Let our experts help you choose the
-              perfect aluminium windows for your
-              home.
+              perfect product for your
+              space.
             </p>
           </div>
 
