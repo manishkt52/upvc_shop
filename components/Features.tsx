@@ -70,10 +70,11 @@ export default function Features() {
           </h2>
 
           {/* <p className="mt-5 text-2xl leading-8 text-gray-600"> */}
-          <p className="mt-4 mx-auto max-w-4xl text-lg leading-relaxed text-gray-600 md:text-2xl">
-            Beautifully crafted upvc windows
-            designed for performance and modern
-            living.
+          {/* <p className="mt-4 mx-auto max-w-4xl text-lg leading-relaxed text-gray-600 md:text-2xl">
+          Forget the old style that brings various challenges of maintainence - just choose uPVC
+          </p> */}
+          <p className="mt-4 mx-auto text-lg leading-relaxed text-gray-600 md:whitespace-nowrap md:text-2xl">
+            Forget the old style that brings various challenges of maintainence - just choose uPVC
           </p>
         </div>
 
