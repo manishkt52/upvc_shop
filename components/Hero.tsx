@@ -60,7 +60,7 @@ export default function Hero() {
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110"
         >
           <img
-            src="/social_media/instagram.png"
+            src="/social_media/Instagram.png"
             alt="Instagram"
             className="h-9 w-9 object-contain"
           />
